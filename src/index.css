@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+  }
+  ::selection {
+    @apply bg-gold-400 text-white;
+  }
+}
+
+@layer components {
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gradient-gold text-white font-sans font-medium text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-300 hover:shadow-gold hover:scale-[1.03] active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-gold-400 text-gold-700 font-sans font-medium text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-300 hover:bg-gold-400 hover:text-white hover:scale-[1.03] active:scale-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 text-charcoal font-sans font-medium text-sm uppercase tracking-[0.12em] transition-all duration-300 hover:text-gold-600;
+  }
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40;
+  }
+  .glass-dark {
+    @apply bg-charcoal/40 backdrop-blur-xl border border-white/10;
+  }
+  .section-label {
+    @apply inline-block text-xs font-sans font-medium uppercase tracking-[0.3em] text-gold-600 mb-4;
+  }
+  .heading-1 {
+    @apply text-hero font-serif font-light text-charcoal;
+  }
+  .heading-2 {
+    @apply text-display font-serif font-light text-charcoal;
+  }
+  .heading-3 {
+    @apply text-3xl md:text-4xl font-serif font-light text-charcoal;
+  }
+  .text-body {
+    @apply text-base leading-[1.7] text-charcoal/70;
+  }
+  .card-luxury {
+    @apply bg-white rounded-2xl shadow-soft overflow-hidden transition-all duration-500 hover:shadow-soft-lg;
+  }
+  .input-luxury {
+    @apply w-full px-4 py-3 bg-white/80 border border-gold-200 rounded-xl text-charcoal placeholder-charcoal/40 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all duration-200;
+  }
+  .label-luxury {
+    @apply block text-xs font-sans font-medium uppercase tracking-[0.1em] text-charcoal/60 mb-1.5;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .aspect-hero {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  background: linear-gradient(90deg, #E8DCC7 25%, #F5EDD8 50%, #E8DCC7 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
